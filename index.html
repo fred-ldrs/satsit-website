@@ -51,6 +51,12 @@
                     Bitcoin or Fiat?
                 </a>
             </div>
+            <div class="block-height-badge">
+                <a href="https://mempool.space" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-cube"></i>
+                    Block <span id="block-height">…</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -157,6 +163,27 @@
     </div>
 </footer>
 
+<!-- Actual block height script -->
 <script src="js/nav.js"></script>
+<script>
+(function () {
+    var el = document.getElementById('block-height');
+    if (!el) return;
+
+    function updateBlockHeight() {
+        fetch('https://mempool.space/api/blocks/tip/height')
+            .then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); })
+            .then(function (h) { el.textContent = Number(h).toLocaleString(); })
+            .catch(function () { el.textContent = 'N/A'; });
+    }
+
+    // Initial load
+    updateBlockHeight();
+
+    // Auto-update every 30 seconds
+    setInterval(updateBlockHeight, 30000);
+})();
+</script>
+
 </body>
 </html>

@@ -171,6 +171,26 @@ nav ul li a.active {
     flex-wrap: wrap;
 }
 
+.block-height-badge {
+    margin-top: 20px;
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+.block-height-badge a {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    transition: color .2s, border-color .2s;
+}
+.block-height-badge a:hover {
+    color: var(--btc);
+    border-color: var(--border-btc);
+}
+
 .btn-primary {
     background: linear-gradient(135deg, var(--btc) 0%, var(--btc-deep) 100%);
     color: #fff;
