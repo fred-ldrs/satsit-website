@@ -66,19 +66,15 @@ header .container {
 }
 
 .site-title img {
-    height: 32px;
+    height: 28px;
     width: auto;
+    display: block;
 }
 
 .site-title a {
-    color: inherit;
-}
-
-.site-title span {
-    background: linear-gradient(135deg, var(--btc) 0%, #ffd700 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: flex;
+    align-items: center;
+    line-height: 0;
 }
 
 nav ul {
@@ -150,10 +146,7 @@ nav ul li a.active {
     font-weight: 800;
     line-height: 1.15;
     margin-bottom: 18px;
-    background: linear-gradient(135deg, var(--btc) 20%, #ffd700 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--btc);
 }
 
 .hero-sub {
