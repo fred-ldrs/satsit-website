@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
     <style>
+        .card--calc {
+            flex-direction: column;
+            align-items: stretch;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .calc-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -50,22 +57,25 @@
             border: none;
             outline: none;
             color: var(--text);
-            font-size: 1.6rem;
+            font-size: 2rem;
             font-weight: 700;
             font-family: inherit;
         }
         .calc-field input::placeholder { color: var(--muted); }
         .price-badge {
-            display: inline-flex;
+            display: flex;
+            justify-content: center;
             align-items: center;
             gap: 8px;
             background: var(--bg-card);
             border: 1px solid var(--border-btc);
             border-radius: 20px;
-            padding: 8px 16px;
-            font-size: .85rem;
+            padding: 10px 20px;
+            font-size: .9rem;
             color: var(--muted);
-            margin-top: 28px;
+            margin-bottom: 24px;
+            width: fit-content;
+            align-self: center;
         }
         .price-badge i { color: var(--btc); }
         .price-badge span { color: var(--btc); font-weight: 600; }
@@ -115,7 +125,7 @@
                 <i class="fas fa-calculator"></i> Converter
             </div>
 
-            <div class="card" style="margin-top: 24px; padding: 28px 28px 24px; margin-bottom: 56px;">
+            <div class="card card--calc" style="margin-top: 24px; margin-bottom: 56px;">
 
                 <div class="price-badge">
                     <i class="fas fa-satellite-dish"></i>
