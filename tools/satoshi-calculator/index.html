@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Satoshi Calculator – Sat's It</title>
+    <meta name="description" content="Convert between Satoshi, Bitcoin, USD and EUR instantly. Live price from mempool.space.">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/bitcoin/Bitcoin.svg">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+    <style>
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        @media (max-width: 540px) {
+            .calc-grid { grid-template-columns: 1fr; }
+        }
+        .calc-field {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 20px;
+            transition: border-color .2s;
+        }
+        .calc-field:focus-within {
+            border-color: var(--btc);
+        }
+        .calc-field label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .calc-field label i {
+            color: var(--btc);
+            font-size: .9rem;
+        }
+        .calc-field input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-family: inherit;
+        }
+        .calc-field input::placeholder { color: var(--muted); }
+        .price-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-btc);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: .85rem;
+            color: var(--muted);
+            margin-top: 28px;
+        }
+        .price-badge i { color: var(--btc); }
+        .price-badge span { color: var(--btc); font-weight: 600; }
+        .calc-note {
+            margin-top: 20px;
+            font-size: .8rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="site-title">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo/sats-it_logo_v1.svg" alt="Sat's It">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/buy-secure">Buy &amp; Secure</a></li>
+                <li><a href="/learn">Learn &amp; Knowledge</a></li>
+                <li><a href="/tools" class="active">Tools &amp; Services</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>Satoshi Calculator</h1>
+            <p class="hero-sub">
+                Convert between Satoshi, Bitcoin, USD and EUR — live price included.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="section-label orange">
+                <i class="fas fa-calculator"></i> Converter
+            </div>
+
+            <div class="card" style="margin-top: 24px; padding: 28px 28px 24px; margin-bottom: 56px;">
+
+                <div class="price-badge">
+                    <i class="fas fa-satellite-dish"></i>
+                    1 BTC =
+                    <span id="price-usd">…</span> USD &nbsp;/&nbsp;
+                    <span id="price-eur">…</span> EUR
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label><i class="fas fa-circle"></i> Satoshi</label>
+                        <input id="inp-sat" type="number" min="0" placeholder="0" inputmode="decimal">
+                    </div>
+                    <div class="calc-field">
+                        <label><i class="fab fa-bitcoin"></i> Bitcoin</label>
+                        <input id="inp-btc" type="number" min="0" placeholder="0" inputmode="decimal">
+                    </div>
+                    <div class="calc-field">
+                        <label><i class="fas fa-dollar-sign"></i> US-Dollar (USD)</label>
+                        <input id="inp-usd" type="number" min="0" placeholder="0" inputmode="decimal">
+                    </div>
+                    <div class="calc-field">
+                        <label><i class="fas fa-euro-sign"></i> Euro (EUR)</label>
+                        <input id="inp-eur" type="number" min="0" placeholder="0" inputmode="decimal">
+                    </div>
+                </div>
+
+                <p class="calc-note">
+                    <i class="fas fa-info-circle"></i>
+                    USD ↔ EUR conversions are derived via the Bitcoin price and may differ slightly from direct forex rates.
+                    Price data via <a href="https://mempool.space" target="_blank" rel="noopener noreferrer">mempool.space</a>.
+                </p>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; 2026 SAT'S IT &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/imprint/" target="_blank" rel="noopener noreferrer">Imprint</a>
+            &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/privacy/web-sats-it/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </p>
+        <p>Made by <a href="https://lueders.app" target="_blank" rel="noopener noreferrer">lueders.app</a></p>
+    </div>
+</footer>
+
+<script src="../../js/nav.js"></script>
+<script>
+(function () {
+    var btcUsd = null, btcEur = null;
+
+    var inpSat = document.getElementById('inp-sat');
+    var inpBtc = document.getElementById('inp-btc');
+    var inpUsd = document.getElementById('inp-usd');
+    var inpEur = document.getElementById('inp-eur');
+    var elUsd  = document.getElementById('price-usd');
+    var elEur  = document.getElementById('price-eur');
+
+    function fmt(n, decimals) {
+        if (n === null || isNaN(n)) return '';
+        return parseFloat(n.toFixed(decimals)).toString();
+    }
+
+    function updateFrom(source) {
+        if (btcUsd === null) return;
+        var val = parseFloat(source.value);
+        if (isNaN(val) || source.value === '') {
+            [inpSat, inpBtc, inpUsd, inpEur].forEach(function(el) {
+                if (el !== source) el.value = '';
+            });
+            return;
+        }
+        var btc;
+        if (source === inpSat) btc = val / 1e8;
+        else if (source === inpBtc) btc = val;
+        else if (source === inpUsd) btc = val / btcUsd;
+        else if (source === inpEur) btc = val / btcEur;
+
+        if (source !== inpSat) inpSat.value = fmt(btc * 1e8, 0);
+        if (source !== inpBtc) inpBtc.value = fmt(btc, 8);
+        if (source !== inpUsd) inpUsd.value = fmt(btc * btcUsd, 2);
+        if (source !== inpEur) inpEur.value = fmt(btc * btcEur, 2);
+    }
+
+    [inpSat, inpBtc, inpUsd, inpEur].forEach(function(el) {
+        el.addEventListener('input', function() { updateFrom(el); });
+    });
+
+    function fetchPrice() {
+        fetch('https://mempool.space/api/v1/prices')
+            .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
+            .then(function(d) {
+                btcUsd = d.USD;
+                btcEur = d.EUR;
+                elUsd.textContent = btcUsd.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                elEur.textContent = btcEur.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                var active = [inpSat, inpBtc, inpUsd, inpEur].find(function(el) { return el.value !== ''; });
+                if (active) updateFrom(active);
+            })
+            .catch(function() {
+                elUsd.textContent = 'N/A';
+                elEur.textContent = 'N/A';
+            });
+    }
+
+    fetchPrice();
+    setInterval(fetchPrice, 60000);
+})();
+</script>
+
+</body>
+</html>

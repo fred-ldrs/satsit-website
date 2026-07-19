@@ -5,9 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     <title>Tools &amp; Services – Sat's It</title>
+    <meta name="description" content="Bitcoin tools and services — Satoshi Calculator and more.">
     <link rel="icon" type="image/svg+xml" href="../assets/images/bitcoin/Bitcoin.svg">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+    <style>
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        @media (max-width: 540px) {
+            .calc-grid { grid-template-columns: 1fr; }
+        }
+        .calc-field {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 20px;
+            transition: border-color .2s;
+        }
+        .calc-field:focus-within {
+            border-color: var(--btc);
+        }
+        .calc-field label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .calc-field label i {
+            color: var(--btc);
+            font-size: .9rem;
+        }
+        .calc-field input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-family: inherit;
+        }
+        .calc-field input::placeholder { color: var(--muted); }
+        .price-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-btc);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: .85rem;
+            color: var(--muted);
+            margin-top: 28px;
+        }
+        .price-badge i { color: var(--btc); }
+        .price-badge span { color: var(--btc); font-weight: 600; }
+        .calc-note {
+            margin-top: 20px;
+            font-size: .8rem;
+            color: var(--muted);
+        }
+    </style>
 </head>
 <body>
 
@@ -36,7 +103,34 @@
     <section class="hero">
         <div class="container">
             <h1>Tools &amp; Services</h1>
-            <p class="hero-sub">Coming soon.</p>
+            <p class="hero-sub">Handy Bitcoin tools — free to use in your browser.</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="section-label orange">
+                <i class="fas fa-wrench"></i> Tools
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <i class="fas fa-calculator card-icon"></i>
+                    <div>
+                        <h3><a href="/tools/satoshi-calculator/">Satoshi Calculator</a></h3>
+                        <p>
+                            Convert between Satoshi, Bitcoin, USD and EUR instantly.
+                            Live price updated every minute via mempool.space.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="/tools/satoshi-calculator/" class="play-btn">
+                        <i class="fas fa-arrow-right"></i> Open Calculator
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 </main>
@@ -49,6 +143,7 @@
             &nbsp;|&nbsp;
             <a href="https://legal.lueders.solutions/en/privacy/web-sats-it/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
         </p>
+        <p>Made by <a href="https://lueders.app" target="_blank" rel="noopener noreferrer">lueders.app</a></p>
     </div>
 </footer>
 
