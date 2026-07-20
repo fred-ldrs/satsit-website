@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Blog – Sat's It</title>
+    <meta name="description" content="Articles on Bitcoin, life, and the future of money. Personal perspectives from the Sat's It team.">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/bitcoin/Bitcoin.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+    <link rel="canonical" href="https://sats-it.com/blog/">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 28px;
+        }
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: background .25s, box-shadow .25s, border-color .25s;
+            text-decoration: none;
+        }
+        .blog-card:hover {
+            background: var(--bg-card-h);
+            border-color: var(--border-btc);
+            box-shadow: 0 8px 28px rgba(0,0,0,.35);
+            color: inherit;
+        }
+        .blog-card-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+        }
+        .blog-card-body {
+            padding: 20px 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+        .blog-card-meta {
+            font-size: .75rem;
+            color: var(--muted);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .blog-card-meta i { color: var(--btc); margin-right: 4px; }
+        .blog-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.4;
+        }
+        .blog-card p {
+            font-size: .86rem;
+            color: var(--muted);
+            line-height: 1.6;
+            flex: 1;
+        }
+        .blog-card-read {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--btc);
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="site-title">
+            <a href="../index.html">
+                <img src="../assets/images/logo/sats-it_logo_v1.svg" alt="Sat's It">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/buy-secure">Buy &amp; Secure</a></li>
+                <li><a href="/learn">Learn &amp; Knowledge</a></li>
+                <li><a href="/blog" class="active">Blog &amp; Insights</a></li>
+                <li><a href="/tools">Tools &amp; Services</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>Blog</h1>
+            <p class="hero-sub">
+                Personal perspectives on Bitcoin, life, and the future of money.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+
+            <div class="section-label orange">
+                <i class="fas fa-pen-nib"></i> Articles
+            </div>
+
+            <div class="blog-grid">
+
+                <a href="/learn/blog/bitcoin-and-fatherhood/" class="blog-card">
+                    <img src="../assets/images/blog/253f9983f65811427e6aeb2265001663b695ce657592ccee7c524b24f29067e9.jpg"
+                         alt="Bitcoin and Fatherhood"
+                         class="blog-card-img"
+                         loading="lazy">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fas fa-calendar"></i> July 2026</span>
+                            <span><i class="fas fa-tag"></i> Bitcoin &middot; Life</span>
+                        </div>
+                        <h3>Bitcoin and Fatherhood: Hope, Patience, and Responsibility for the Future</h3>
+                        <p>Since becoming a dad, Bitcoin has taken on a deeper meaning for me. It's not just about financial freedom anymore – it's about hope for the world my child will grow up in.</p>
+                        <span class="blog-card-read"><i class="fas fa-arrow-right"></i> Read article</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; 2026 SAT'S IT &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/imprint/" target="_blank" rel="noopener noreferrer">Imprint</a>
+            &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/privacy/web-sats-it/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+</body>
+</html>
