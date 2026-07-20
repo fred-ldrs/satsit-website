@@ -136,8 +136,8 @@ nav ul li a.active {
 .hero-logo {
     display: block;
     margin: 0 auto 28px;
-    height: 88px;
-    width: auto;
+    width: clamp(160px, 40vw, 320px);
+    height: auto;
     filter: drop-shadow(0 0 24px rgba(247,147,26,.5));
 }
 

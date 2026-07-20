@@ -63,7 +63,7 @@
         }
         .calc-field input::placeholder { color: var(--muted); }
         .price-badge {
-            display: flex;
+            display: inline-flex;
             justify-content: center;
             align-items: center;
             gap: 8px;
@@ -74,11 +74,21 @@
             font-size: .9rem;
             color: var(--muted);
             margin-bottom: 24px;
-            width: fit-content;
             align-self: center;
+            white-space: nowrap;
         }
-        .price-badge i { color: var(--btc); }
-        .price-badge span { color: var(--btc); font-weight: 600; }
+        .price-badge i { color: var(--btc); flex-shrink: 0; }
+        .price-badge .price-text { color: var(--muted); white-space: normal; }
+        .price-badge .price-text .val { color: var(--btc); font-weight: 600; }
+        @media (max-width: 480px) {
+            .price-badge {
+                white-space: normal;
+                text-align: center;
+                flex-wrap: wrap;
+                font-size: .82rem;
+                padding: 8px 14px;
+            }
+        }
         .calc-note {
             margin-top: 20px;
             font-size: .8rem;
@@ -129,9 +139,7 @@
 
                 <div class="price-badge">
                     <i class="fas fa-satellite-dish"></i>
-                    1 BTC =
-                    <span id="price-usd">…</span> USD &nbsp;/&nbsp;
-                    <span id="price-eur">…</span> EUR
+                    <span class="price-text">1 BTC = <span class="val" id="price-usd">…</span> USD / <span class="val" id="price-eur">…</span> EUR</span>
                 </div>
 
                 <div class="calc-grid">
