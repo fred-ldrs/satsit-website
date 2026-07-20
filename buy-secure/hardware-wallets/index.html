@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Hardware Wallets – Sat's It</title>
+    <meta name="description" content="Our recommended Bitcoin hardware wallets. Secure your sats with a BitBox02 — the Swiss-made, open-source hardware wallet.">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/bitcoin/Bitcoin.svg">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+    <link rel="canonical" href="https://sats-it.com/buy-secure/hardware-wallets/">
+    <style>
+        .hw-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 28px;
+        }
+        .hw-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: background .25s, box-shadow .25s, border-color .25s;
+        }
+        .hw-card:hover {
+            background: var(--bg-card-h);
+            border-color: var(--border-btc);
+            box-shadow: 0 8px 28px rgba(0,0,0,.35), inset 4px 0 0 var(--btc);
+        }
+        .hw-card-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(247,147,26,.12);
+            color: var(--btc);
+            font-size: .72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--border-btc);
+            width: fit-content;
+        }
+        .hw-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--btc), #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hw-card p {
+            color: var(--muted);
+            font-size: .9rem;
+            line-height: 1.65;
+            flex: 1;
+        }
+        .hw-card ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .hw-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: var(--muted);
+            font-size: .85rem;
+            line-height: 1.5;
+        }
+        .hw-card ul li i {
+            color: var(--btc);
+            margin-top: 2px;
+            flex-shrink: 0;
+            font-size: .8rem;
+        }
+        .hw-card-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 20px;
+            background: var(--btc);
+            color: #000;
+            border-radius: 8px;
+            font-size: .9rem;
+            font-weight: 700;
+            transition: background .2s, transform .15s;
+            align-self: flex-start;
+        }
+        .hw-card-action:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-2px);
+        }
+        .affiliate-notice {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: rgba(247,147,26,.07);
+            border: 1px solid var(--border-btc);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: .82rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        .affiliate-notice i {
+            color: var(--btc);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="site-title">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo/sats-it_logo_v1.svg" alt="Sat's It">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/buy-secure" class="active">Buy &amp; Secure</a></li>
+                <li><a href="/learn">Learn &amp; Knowledge</a></li>
+                <li><a href="/tools">Tools &amp; Services</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hardware Wallets</h1>
+            <p class="hero-sub">
+                Not your keys, not your coins.<br>
+                Secure your Bitcoin with a trusted, open-source hardware wallet.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+
+            <div class="section-label orange">
+                <i class="fas fa-shield-halved"></i> Our Recommendation
+            </div>
+
+            <div class="affiliate-notice">
+                <i class="fas fa-circle-info"></i>
+                <span>
+                    <strong style="color: var(--text);">Affiliate disclosure:</strong>
+                    Some links on this page are affiliate links. If you buy through them, we earn a small commission — at no extra cost to you.
+                    We only recommend products we genuinely trust.
+                </span>
+            </div>
+
+            <div class="hw-grid">
+
+                <!-- BitBox02 Bitcoin-only -->
+                <div class="hw-card">
+                    <span class="hw-card-badge"><i class="fab fa-bitcoin"></i> Bitcoin-only</span>
+                    <h3>BitBox02 Bitcoin-only Edition</h3>
+                    <p>
+                        The focused choice — built exclusively for Bitcoin.
+                        Minimal attack surface, open-source firmware, and designed in Switzerland.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Bitcoin-only firmware (no altcoins)</li>
+                        <li><i class="fas fa-check"></i> Open-source hardware &amp; software</li>
+                        <li><i class="fas fa-check"></i> USB-C, touch slider</li>
+                        <li><i class="fas fa-check"></i> microSD backup</li>
+                        <li><i class="fas fa-check"></i> Made in Switzerland</li>
+                    </ul>
+                    <a href="https://shop.bitbox.swiss/de/products/bitbox02-80/?edition=bitcoin-only-edition&ref=ajsqclun"
+                       target="_blank" rel="noopener noreferrer sponsored" class="hw-card-action">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Shop BitBox02
+                    </a>
+                </div>
+
+                <!-- BitBox02 Nova -->
+                <div class="hw-card">
+                    <span class="hw-card-badge"><i class="fab fa-bitcoin"></i> Bitcoin-only</span>
+                    <h3>BitBox02 Nova</h3>
+                    <p>
+                        The next generation — upgraded display, refined design, and the same
+                        rock-solid open-source security you expect from Shift Crypto.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Bitcoin-only edition available</li>
+                        <li><i class="fas fa-check"></i> Larger, clearer display</li>
+                        <li><i class="fas fa-check"></i> Open-source hardware &amp; software</li>
+                        <li><i class="fas fa-check"></i> USB-C, touch slider</li>
+                        <li><i class="fas fa-check"></i> Made in Switzerland</li>
+                    </ul>
+                    <a href="https://shop.bitbox.swiss/de/products/bitbox02-nova-79/?edition=bitcoin-only-edition&ref=ajsqclun"
+                       target="_blank" rel="noopener noreferrer sponsored" class="hw-card-action">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Shop BitBox02 Nova
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; 2026 SAT'S IT &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/imprint/" target="_blank" rel="noopener noreferrer">Imprint</a>
+            &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/privacy/web-sats-it/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
+<script src="../../js/nav.js"></script>
+</body>
+</html>
