@@ -149,6 +149,10 @@ nav ul li a.active {
     color: var(--btc);
 }
 
+@media (max-width: 540px) {
+    .hero-line { display: block; }
+}
+
 .hero-sub {
     font-size: 1.1rem;
     color: var(--muted);
