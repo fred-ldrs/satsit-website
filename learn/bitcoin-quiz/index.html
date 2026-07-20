@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Bitcoin Trivia Quiz – Test Your Bitcoin Knowledge | Sat's It</title>
+    <meta name="description" content="Play the free Bitcoin Trivia Quiz and test your knowledge of Bitcoin, wallets, mining, the Lightning Network, and Bitcoin history. Available as a PWA and on Android.">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/bitcoin/Bitcoin.svg">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+    <link rel="canonical" href="https://sats-it.com/learn/bitcoin-quiz/">
+    <style>
+        .quiz-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 30px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            transition: background .25s, box-shadow .25s, border-color .25s;
+            flex-wrap: wrap;
+        }
+        .quiz-card:hover {
+            background: var(--bg-card-h);
+            border-color: var(--border-btc);
+            box-shadow: 0 8px 28px rgba(0,0,0,.35), inset 4px 0 0 var(--btc);
+        }
+        .quiz-card-body {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+            min-width: 0;
+        }
+        .quiz-card-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            width: 40px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--btc) 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .quiz-card-body h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: linear-gradient(90deg, var(--btc), #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .quiz-card-body p {
+            color: var(--muted);
+            font-size: .88rem;
+            line-height: 1.55;
+        }
+        .quiz-card-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+        .faq-wrap {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .faq-wrap h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        details {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: border-color .2s;
+        }
+        details[open] { border-color: var(--border-btc); }
+        summary {
+            padding: 16px 20px;
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--text);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '+';
+            color: var(--btc);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        details[open] summary::after { content: '−'; }
+        .faq-answer {
+            padding: 0 20px 16px;
+            color: var(--muted);
+            font-size: .9rem;
+            line-height: 1.7;
+        }
+        .faq-answer a { color: var(--btc); }
+        .store-btn { display: inline-block; line-height: 0; transition: transform .2s, opacity .2s; }
+        .store-btn:hover { transform: translateY(-2px); opacity: .85; }
+        .store-badge { height: 44px; width: auto; display: block; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="site-title">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo/sats-it_logo_v1.svg" alt="Sat's It">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/buy-secure">Buy &amp; Secure</a></li>
+                <li><a href="/learn" class="active">Learn &amp; Knowledge</a></li>
+                <li><a href="/blog">Blog &amp; Insights</a></li>
+                <li><a href="/tools">Tools &amp; Services</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <h1><i class="fab fa-bitcoin" style="color:var(--btc);"></i> Bitcoin Trivia Quiz</h1>
+            <p class="hero-sub">
+                Think you know Bitcoin? Test your knowledge of Bitcoin history,
+                mining, the Lightning Network, wallets, and more —
+                free, in your browser or on Android.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+
+            <div class="section-label orange">
+                <i class="fas fa-play"></i> Play Now
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-card-body">
+                    <i class="fas fa-globe quiz-card-icon"></i>
+                    <div>
+                        <h2>Play in Your Browser (PWA)</h2>
+                        <p>Instant access — no download needed. Install as a Progressive Web App for offline play on any device.</p>
+                    </div>
+                </div>
+                <div class="quiz-card-actions">
+                    <a href="https://bitcoin.triviaquiz.games" target="_blank" rel="noopener noreferrer" class="store-btn">
+                        <img src="../../assets/images/pwa/PWA-dark-en.svg" alt="Open as Web App (PWA)" class="store-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-card-body">
+                    <i class="fab fa-google-play quiz-card-icon"></i>
+                    <div>
+                        <h2>Download on Android</h2>
+                        <p>Get the Bitcoin Trivia Quiz app from Google Play. Play offline, track your score, and challenge yourself daily.</p>
+                    </div>
+                </div>
+                <div class="quiz-card-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.luederssolutions.bitcointrivia" target="_blank" rel="noopener noreferrer" class="store-btn">
+                        <img src="../../assets/images/googleplay/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play" class="store-badge">
+                    </a>
+                </div>
+            </div>
+
+            <div style="margin-top: 56px;">
+                <div class="section-label orange">
+                    <i class="fas fa-circle-question"></i> FAQ
+                </div>
+
+                <div class="faq-wrap" style="margin-top: 20px;">
+
+                    <details>
+                        <summary>What topics does the Bitcoin Trivia Quiz cover?</summary>
+                        <div class="faq-answer">
+                            Questions span the full spectrum of Bitcoin knowledge: the history of Bitcoin and Satoshi Nakamoto, mining and halving events, wallets and private keys, the Lightning Network, notable price milestones, and Bitcoin fundamentals.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>How many questions are included?</summary>
+                        <div class="faq-answer">
+                            The quiz features a large pool of questions across multiple difficulty levels — Bitcoiner, Cypherpunk, and Satoshi — so every session is a fresh challenge whether you are new to Bitcoin or a long-time HODLer.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Is the Bitcoin Trivia Quiz free?</summary>
+                        <div class="faq-answer">
+                            Yes, completely free. Play in the browser at <a href="https://bitcoin.triviaquiz.games" target="_blank" rel="noopener noreferrer">bitcoin.triviaquiz.games</a> or download the Android app from Google Play — no purchase or subscription required.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Can I play offline?</summary>
+                        <div class="faq-answer">
+                            Yes. Install the PWA from your browser and all questions are cached locally for offline play. The Android app also works without an internet connection.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Can I submit my own Bitcoin trivia question?</summary>
+                        <div class="faq-answer">
+                            Yes! Question submissions and community questions are currently handled via our quiz platform. A native submission feature is coming to Sat's It — stay tuned.<br><br>
+                            For now, use the links below:<br>
+                            <a href="https://octoquizpus.com/submit/" target="_blank" rel="noopener noreferrer">→ Submit a question</a><br>
+                            <a href="https://octoquizpus.com/community-questions/" target="_blank" rel="noopener noreferrer">→ Browse community questions</a>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; 2026 SAT'S IT &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/imprint/" target="_blank" rel="noopener noreferrer">Imprint</a>
+            &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/privacy/web-sats-it/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
+<script src="../../js/nav.js"></script>
+</body>
+</html>
