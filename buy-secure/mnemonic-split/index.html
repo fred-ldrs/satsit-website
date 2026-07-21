@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>2/3 Mnemonic Split – Sat's It</title>
+    <meta name="description" content="Learn how to split your Bitcoin seed phrase into 3 parts with a 2-of-3 scheme — so any two parts are enough to recover your wallet, but one alone reveals nothing.">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/bitcoin/Bitcoin.svg">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+    <link rel="canonical" href="https://sats-it.com/buy-secure/mnemonic-split/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sats-it.com/buy-secure/mnemonic-split/">
+    <meta property="og:title" content="2/3 Mnemonic Split – Sat's It">
+    <meta property="og:description" content="Learn how to split your Bitcoin seed phrase into 3 parts with a 2-of-3 scheme — so any two parts are enough to recover your wallet, but one alone reveals nothing.">
+    <meta property="og:image" content="https://sats-it.com/assets/images/logo/sats-it_logo_v1.webp">
+    <meta property="og:site_name" content="Sat's It">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2/3 Mnemonic Split – Sat's It">
+    <meta name="twitter:description" content="Learn how to split your Bitcoin seed phrase into 3 parts with a 2-of-3 scheme — so any two parts are enough to recover your wallet, but one alone reveals nothing.">
+    <meta name="twitter:image" content="https://sats-it.com/assets/images/logo/sats-it_logo_v1.webp">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://sats-it.com/buy-secure/mnemonic-split/",
+      "name": "2/3 Mnemonic Split",
+      "description": "Learn how to split your Bitcoin seed phrase into 3 parts with a 2-of-3 scheme — so any two parts are enough to recover your wallet, but one alone reveals nothing.",
+      "isPartOf": { "@id": "https://sats-it.com/#website" }
+    }
+    </script>
+    <style>
+        .info-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-btc);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 28px;
+        }
+        .info-box h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--btc);
+            margin-bottom: 12px;
+        }
+        .info-box p, .info-box li {
+            color: var(--muted);
+            font-size: .9rem;
+            line-height: 1.75;
+        }
+        .info-box ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        .split-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .split-part {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 18px;
+            text-align: center;
+            transition: border-color .25s, box-shadow .25s;
+        }
+        .split-part:hover {
+            border-color: var(--border-btc);
+            box-shadow: 0 4px 18px rgba(0,0,0,.3);
+        }
+        .split-part .part-label {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--btc), #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .split-part p {
+            color: var(--muted);
+            font-size: .85rem;
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+        .warning-box {
+            background: rgba(247,147,26,.06);
+            border: 1px solid var(--border-btc);
+            border-left: 4px solid var(--btc);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 28px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .warning-box i {
+            color: var(--btc);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .warning-box p {
+            color: var(--muted);
+            font-size: .88rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .pdf-section {
+            margin-top: 40px;
+        }
+        .pdf-section h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .pdf-embed {
+            width: 100%;
+            height: 780px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #111;
+        }
+        .pdf-fallback {
+            margin-top: 12px;
+            text-align: center;
+            font-size: .85rem;
+            color: var(--muted);
+        }
+        .pdf-fallback a {
+            color: var(--btc);
+        }
+        @media (max-width: 640px) {
+            .pdf-embed { height: 480px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="site-title">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo/sats-it_logo_v1.svg" alt="Sat's It">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/buy-secure" class="active">Buy &amp; Secure</a></li>
+                <li><a href="/learn">Learn &amp; Knowledge</a></li>
+                <li><a href="/blog">Blog &amp; Insights</a></li>
+                <li><a href="/tools">Tools &amp; Services</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>2/3 Mnemonic Split</h1>
+            <p class="hero-sub">Split your seed phrase into 3 shares — any 2 of them are enough to recover your wallet.</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="section-label orange">
+                <i class="fas fa-shield-halved"></i> Seed Security
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <i class="fas fa-key card-icon"></i>
+                    <div>
+                        <h3>What is a 2/3 Mnemonic Split?</h3>
+                        <p>
+                            A 2/3 Mnemonic Split divides your 24-word seed phrase into three separate shares (A, B, C).
+                            Any combination of two shares is sufficient to reconstruct the full seed — but a single
+                            share alone reveals nothing about your wallet. This gives you both redundancy and security.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="split-grid">
+                <div class="split-part">
+                    <div class="part-label">Share A + B</div>
+                    <p>Store at location 1 + location 2 — together they recover your seed.</p>
+                </div>
+                <div class="split-part">
+                    <div class="part-label">Share A + C</div>
+                    <p>Store at location 1 + location 3 — equally valid recovery combination.</p>
+                </div>
+                <div class="split-part">
+                    <div class="part-label">Share B + C</div>
+                    <p>Store at location 2 + location 3 — your third recovery option.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h2><i class="fas fa-circle-check"></i>&nbsp; Benefits at a glance</h2>
+                <ul>
+                    <li>No single point of failure — losing one share does not compromise your funds.</li>
+                    <li>No single point of attack — finding one share gives an attacker nothing.</li>
+                    <li>Three geographically separate storage locations (e.g. home safe, bank vault, trusted person).</li>
+                    <li>No special hardware or software required — pen, paper, and the template are enough.</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <i class="fas fa-triangle-exclamation"></i>
+                <p>
+                    <strong style="color: var(--text);">Never store all three shares in the same location.</strong>
+                    The security of this scheme depends entirely on keeping the shares physically separated.
+                    Always verify the reconstruction process before storing your real seed.
+                </p>
+            </div>
+
+            <div class="pdf-section">
+                <h2><i class="fas fa-file-pdf"></i>&nbsp; Template &amp; Instructions</h2>
+                <iframe
+                    class="pdf-embed"
+                    src="../../assets/pdf/MnemonicSplit.pdf"
+                    title="2/3 Mnemonic Split Template"
+                    loading="lazy">
+                </iframe>
+                <p class="pdf-fallback">
+                    Can't see the PDF?
+                    <a href="../../assets/pdf/MnemonicSplit.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i> Download MnemonicSplit.pdf
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; 2026 SAT'S IT &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/imprint/" target="_blank" rel="noopener noreferrer">Imprint</a>
+            &nbsp;|&nbsp;
+            <a href="https://legal.lueders.solutions/en/privacy/web-sats-it/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
+<script src="../../js/nav.js"></script>
+</body>
+</html>
