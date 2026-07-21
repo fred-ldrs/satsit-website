@@ -169,7 +169,7 @@
     <section class="hero">
         <div class="container">
             <h1>2/3 Mnemonic Split</h1>
-            <p class="hero-sub">Split your seed phrase into 3 shares — any 2 of them are enough to recover your wallet.</p>
+            <p class="hero-sub">3 Backups, 3 Orte — 2 davon reichen zur Wiederherstellung. 1 verloren? Kein Problem. 1 gefunden? Kein Risiko.</p>
         </div>
     </section>
 
@@ -185,9 +185,15 @@
                     <div>
                         <h3>What is a 2/3 Mnemonic Split?</h3>
                         <p>
-                            A 2/3 Mnemonic Split divides your 24-word seed phrase into three separate shares (A, B, C).
-                            Any combination of two shares is sufficient to reconstruct the full seed — but a single
-                            share alone reveals nothing about your wallet. This gives you both redundancy and security.
+                            Beim 2/3 Mnemonic Split werden aus deiner 24-Wörter Seed Phrase drei Backups erstellt.
+                            Jedes Backup enthält einen überlappenden Ausschnitt der Wörter — sodass
+                            je zwei Backups zusammen die vollständige Seed Phrase ergeben.
+                            Jedes Backup wird an einem anderen, sicheren Ort aufbewahrt.
+                        </p>
+                        <p style="margin-top:10px;">
+                            Geht ein Backup verloren, kannst du mit den verbleibenden zwei deine Wallet jederzeit
+                            wiederherstellen. Findet jemand ein einzelnes Backup, hat er keine Möglichkeit,
+                            daraus die vollständige Seed Phrase zu rekonstruieren.
                         </p>
                     </div>
                 </div>
@@ -195,35 +201,44 @@
 
             <div class="split-grid">
                 <div class="split-part">
-                    <div class="part-label">Share A + B</div>
-                    <p>Store at location 1 + location 2 — together they recover your seed.</p>
+                    <div class="part-label">Ort 1</div>
+                    <p>Backup A<br><span style="font-size:.8rem;color:var(--muted)">z.&nbsp;B. Zuhause im Safe</span></p>
                 </div>
                 <div class="split-part">
-                    <div class="part-label">Share A + C</div>
-                    <p>Store at location 1 + location 3 — equally valid recovery combination.</p>
+                    <div class="part-label">Ort 2</div>
+                    <p>Backup B<br><span style="font-size:.8rem;color:var(--muted)">z.&nbsp;B. Bankschließfach</span></p>
                 </div>
                 <div class="split-part">
-                    <div class="part-label">Share B + C</div>
-                    <p>Store at location 2 + location 3 — your third recovery option.</p>
+                    <div class="part-label">Ort 3</div>
+                    <p>Backup C<br><span style="font-size:.8rem;color:var(--muted)">z.&nbsp;B. vertraute Person</span></p>
                 </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;border-color:var(--border);">
+                <h2 style="color:var(--text);font-size:1rem;">Wiederherstellung — welche Kombinationen funktionieren:</h2>
+                <ul>
+                    <li><strong style="color:var(--btc)">A + B</strong> &nbsp;→ vollständige Seed Phrase</li>
+                    <li><strong style="color:var(--btc)">A + C</strong> &nbsp;→ vollständige Seed Phrase</li>
+                    <li><strong style="color:var(--btc)">B + C</strong> &nbsp;→ vollständige Seed Phrase</li>
+                </ul>
+                <p style="margin-top:10px;">Ein einzelnes Backup (A, B oder C allein) reicht <strong style="color:var(--text)">nicht</strong> aus.</p>
             </div>
 
             <div class="info-box">
-                <h2><i class="fas fa-circle-check"></i>&nbsp; Benefits at a glance</h2>
+                <h2><i class="fas fa-circle-check"></i>&nbsp; Vorteile auf einen Blick</h2>
                 <ul>
-                    <li>No single point of failure — losing one share does not compromise your funds.</li>
-                    <li>No single point of attack — finding one share gives an attacker nothing.</li>
-                    <li>Three geographically separate storage locations (e.g. home safe, bank vault, trusted person).</li>
-                    <li>No special hardware or software required — pen, paper, and the template are enough.</li>
+                    <li><strong style="color:var(--text)">Redundanz:</strong> Ein verlorenes Backup ist kein Problem — die anderen zwei reichen zur Wiederherstellung.</li>
+                    <li><strong style="color:var(--text)">Sicherheit:</strong> Ein einzelnes gefundenes Backup ist wertlos — kein Angreifer kann damit etwas anfangen.</li>
+                    <li><strong style="color:var(--text)">Drei Standorte:</strong> Verteile die Backups auf drei verschiedene, sichere Orte.</li>
+                    <li><strong style="color:var(--text)">Keine Software nötig:</strong> Stift, Papier und das Template reichen völlig aus.</li>
                 </ul>
             </div>
 
             <div class="warning-box">
                 <i class="fas fa-triangle-exclamation"></i>
                 <p>
-                    <strong style="color: var(--text);">Never store all three shares in the same location.</strong>
-                    The security of this scheme depends entirely on keeping the shares physically separated.
-                    Always verify the reconstruction process before storing your real seed.
+                    <strong style="color: var(--text);">Bewahre niemals zwei Backups am selben Ort auf.</strong>
+                    Die Sicherheit des Verfahrens steht und fällt mit der räumlichen Trennung der drei Backups.
+                    Teste die Wiederherstellung unbedingt, bevor du deine echte Seed Phrase auf diese Weise sicherst.
                 </p>
             </div>
 
